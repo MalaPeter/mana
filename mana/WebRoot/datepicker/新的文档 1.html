@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+
+		<script src="kit.js"></script>
+
+<script src="array.js"></script>
+		<script src="date.js"></script>
+		<script src="dom.js"></script>
+		<script src="selector.js"></script>
+
+  <script src="datepicker.js"></script>
+		<script src="datepicker-n-months.js"></script>
+		<link rel="stylesheet" href="datepicker.css" />
+
+
+  <title>Document</title>
+ </head>
+ <body>
+  <h4>多月日历</h4>
+	<div id="J_datePicker"></div>
+	<br/>
+	<br/>
+
+	<h4>输入框</h4>
+				<input type="text" id="J_input" value="" style="*zoom:1;">
+				<br>
+				sdfsdfs
+
+<script>
+			$kit.$(function() {
+				//默认日历
+				window.picker = new $kit.ui.DatePicker.NMonths();
+				picker.init();
+				$kit.el('#J_datePicker').appendChild(picker.picker);
+				picker.show();
+				picker.ev({
+					ev : 'change',
+					fn : function(e) {
+						alert(picker.getValue());
+					}
+				})
+				//输入框下拉
+				$kit.ev({
+					el : '#J_input',
+					ev : 'focus',
+					fn : function(e) {
+						var d, ipt = e.target;
+						d = e.target[$kit.ui.DatePicker.defaultConfig.kitWidgetName];
+						if(d) {
+							d.show();
+						} else {
+							d = new $kit.ui.DatePicker.NMonths();
+							d.init();
+							d.adhere($kit.el('#J_input'));
+							d.show();
+						}
+					}
+				});
+				$kit.ev({
+					el : document,
+					ev : 'click',
+					fn : function(e) {
+						var input = $kit.el('#J_input');
+						d = input[$kit.ui.DatePicker.defaultConfig.kitWidgetName];
+						if(d && !$kit.contains(d.picker, e.target) && input != e.target) {
+							d.hide();
+						}
+					}
+				});
+			})
+		</script>
+
+ </body>
+</html>
