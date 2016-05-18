@@ -19,9 +19,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
   </head>
-  
+   
   <body>
-	    欢迎访问!<br>
+	    欢迎访问!<br> 
 	    吉林人民广播电台 经营中心 核算管理系统<br>
 	  请通过安全软件进行访问
 	  软件下载地址：<a href="<%=path %>/MyChrome.rar">Chrome内核 通道工具 点击下载</a>
