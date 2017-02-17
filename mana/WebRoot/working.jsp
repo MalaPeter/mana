@@ -9,7 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>吉林人民广播电台 经营中心 合同管理系统</title>
+    <title>建设中</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -18,11 +19,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+
   </head>
-   
+  
   <body>
-	    欢迎访问!<br>
-	    吉林人民广播电台 经营中心 合同管理系统<br> 
-	  <h1>访问受限！</h1>
+    <h1>建设中。。。</h1>
   </body>
 </html>

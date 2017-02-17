@@ -9,20 +9,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>吉林人民广播电台 经营中心 合同管理系统</title>
+    <title>My JSP 'test.jsp' starting page</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+	<link rel="stylesheet" href="weui.css"/>
+
+
   </head>
-   
+  
   <body>
-	    欢迎访问!<br>
-	    吉林人民广播电台 经营中心 合同管理系统<br> 
-	  <h1>访问受限！</h1>
+    <a href="#" class="weui_btn weui_btn_primary">按钮</a>
+<a href="#" class="weui_btn weui_btn_disabled weui_btn_primary">按钮</a>
+<a href="#" class="weui_btn weui_btn_warn">确认</a>
+<a href="#" class="weui_btn weui_btn_disabled weui_btn_warn">确认</a>
   </body>
 </html>

@@ -12,7 +12,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>page</title>
+<title>吉林人民广播电台 经营中心 合同管理系统</title>
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
@@ -219,7 +219,7 @@ input:focus {
 <body>
 	<div class="login">
 		<h1>吉林人民广播电台</h1>
-		<h1>经营中心核算系统</h1>
+		<h1>经营中心合同管理系统</h1>
 		<form method="post" action="login">
 			<input type="text" name="uname" placeholder="用户名" required="required" />
 			<input type="password" name="upass" placeholder="密码" required="required" />

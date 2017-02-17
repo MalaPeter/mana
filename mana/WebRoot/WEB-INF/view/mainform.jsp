@@ -152,6 +152,57 @@ function createFrame(url) {
 				case 1: out.print("<font color=green>统计权：全部</font> |"); break;
 			}
 		%>
+		<script type="text/javascript">
+			function jump(id,menu,ager,url) {//按钮ID、功能名称、权限、地址
+				flag = false;
+				switch(menu) {
+					case "shenpi":
+						switch(ager) {
+							case 0: alert("访问权限受限!");break;
+							case 1: flag = true;$('#'+id+'').attr("href",url);break;
+						}
+					break;
+					case "yewu":
+						switch(ager) {
+							case 0: alert("访问权限受限!");break;
+							case 1: flag = true;$('#'+id+'').attr("href",url);break;
+						}
+					break;
+					case "liulan":
+						switch(ager) {
+							case 0: alert("访问权限受限!");break;
+							case 1: alert("访问权限受限!");break;
+							case 2: flag = true;$('#'+id+'').attr("href",url);break;
+						}
+					break;
+					case "kefu":
+						switch(ager) {
+							case 0: alert("访问权限受限!");break;
+							case 1: flag = true;$('#'+id+'').attr("href",url);break;
+						}
+					break;
+					case "caiwu":
+						switch(ager) {
+							case 0: alert("访问权限受限!");break;
+							case 1: flag = true;$('#'+id+'').attr("href",url);break;
+						}
+					break;
+					case "shuju":
+						switch(ager) {
+							case 0: alert("访问权限受限!");break;
+							case 1: flag = true;$('#'+id+'').attr("href",url);break;
+						}
+					break;
+					case "sys":
+						switch(ager) {
+							case 0: alert("访问权限受限!");break;
+							case 1: flag = true;$('#'+id+'').attr("href",url);break;
+						}
+					break;
+				}
+				return flag;
+			}
+		</script>
 	</div>
 	<div region="south" style="height: 20px; background: #D2E0F2;">
 		<div style="text-align: center; font-weight: bold">吉林人民广播电台 经营中心 核算管理系统 V1.0.1 Bate 2016</div>
@@ -159,93 +210,119 @@ function createFrame(url) {
 	<div region="west" split="true" title="导航菜单"
 		style="width: 180px;overflow:hidden;" icon="icon-redo">
 		<div id="menu" class="easyui-accordion" fit="true" border="false">
-			<div title="合同审批" style="overflow:auto; padding: 10px;" icon="icon-edit">
+			<div id="shenpi" title="合同审批" style="overflow:auto; padding: 10px;" icon="icon-edit">
 				<div title="合同审批">
 					<ul>
 						<li>
 							<div>
-								<a target="mainFrame" href="shenpi/PP_index">审批-传媒-品牌(PP)</a>
+								<a id="m1" target="mainFrame" href="#" onclick="return jump('m1','shenpi',<%=ad.getRshenpi()%>,'shenpi/PP_index')">审批-传媒-品牌(PP)</a>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div title="业务部" style="overflow:auto; padding: 10px;"
+			<div id="yewu" title="业务部" style="overflow:auto; padding: 10px;"
 				icon="icon-edit">
 				<div title="业务部">
 					<ul>
 						<li>
 							<div>
-								<a target="mainFrame" href="yewu/qianzhiyewuindex">前置业务录入</a>
+								<a id="m2" target="mainFrame" href="#" onclick="return jump('m2','yewu',<%=ad.getRluru()%>,'yewu/qianzhiyewuindex')">前置业务录入</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a target="mainFrame" href="yewu/qianzhiyewulist">前置业务列表</a>
+								<a id="m3" target="mainFrame" href="#" onclick="return jump('m3','yewu',<%=ad.getRluru()%>,'yewu/qianzhiyewulist')">前置业务列表</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a target="mainFrame" href="yewu/qianzhiyewushenpi">前置业务审批</a>
+								<a id="m4" target="mainFrame" href="#" onclick="return jump('m4','liulan',<%=ad.getRliulan()%>,'yewu/qianzhiyewushenpi')">前置业务审批</a>
+							</div>
+						</li>
+						
+						<li>
+							<div>
+								<a id="m13" target="mainFrame" href="#" onclick="return jump('m13','yewu',<%=ad.getRluru()%>,'yewu_shiduan/index')">录入-代理(DL)-时段</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a target="mainFrame" href="yewu/htchuanmeiindex">录入-传媒-品牌(PP)</a>
+								<a id="m15" target="mainFrame" href="#" onclick="return jump('m15','yewu',<%=ad.getRluru()%>,'yewu_pinpai/index')">录入-品牌(PP)-时段</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a target="mainFrame" href="yewu/htchuanmeilist">管理-传媒-品牌(PP)</a>
+								<a id="m14" target="mainFrame" href="#" onclick="return jump('m14','yewu',<%=ad.getRluru()%>,'yewu_shiduan/list')">管理-代理(DL)-时段</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<a id="m16" target="mainFrame" href="#" onclick="return jump('m16','yewu',<%=ad.getRluru()%>,'yewu_pinpai/list')">管理-品牌(PP)-时段</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<a id="m5" target="mainFrame" href="#" onclick="return jump('m5','yewu',<%=ad.getRluru()%>,'yewu/htchuanmeiindex')">录入-样本</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<a id="m6" target="mainFrame" href="#" onclick="return jump('m6','yewu',<%=ad.getRluru()%>,'yewu/htchuanmeilist')">管理-样本</a>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div title="客服部" style="padding: 10px;" icon="icon-edit">
+			<div id="kefu" title="客服部" style="padding: 10px;" icon="icon-edit">
 				<div title="客服部">
 					<ul>
 						<li>
 							<div>
-								<a target="mainFrame" href="kefu/kfshenheindex">审核-传媒-品牌(PP)</a>
+								<a id="m7" target="mainFrame" href="#" onclick="return jump('m7','kefu',<%=ad.getRshenhe()%>,'kefu/kfshenheindex')">审核-传媒-品牌(PP)</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a target="mainFrame" href="#">停播</a>
+								<a id="m8" target="mainFrame" href="#" onclick="return jump('m8','kefu',<%=ad.getRshenhe()%>,'kefu/Print_list')">打印-传媒-品牌(PP)</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<a id="m9" target="mainFrame" href="#" onclick="return jump('m9','kefu',<%=ad.getRtingbo()%>,'working.jsp')">停播</a>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div title="财务部" style="padding: 10px;" icon="icon-edit">
+			<div id="caiwu" title="财务部" style="padding: 10px;" icon="icon-edit">
 				<div title="财务部">
 					<ul>
 						<li>
 							<div>
-								<a target="mainFrame" href="Product/Default.htm">账务审核</a>
+								<a id="m10" target="mainFrame" href="#" onclick="return jump('m10','caiwu',<%=ad.getRhuakuan()%>,'working.jsp')">账务审核</a>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div title="数据部" style="padding: 10px;" icon="icon-edit">
+			<div id="shuju" title="数据部" style="padding: 10px;" icon="icon-edit">
 				<div title="数据部">
 					<ul>
 						<li>
 							<div>
-								<a target="mainFrame" href="Product/Default.htm">数据统计</a>
+								<a id="m11" target="mainFrame" href="#" onclick="return jump('m11','shuju',<%=ad.getRtongji()%>,'working.jsp')">数据统计</a>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div title="系统管理" style="padding: 10px;" icon="icon-edit">
+			<div id="sys" title="系统管理" style="padding: 10px;" icon="icon-edit">
 				<div title="系统管理">
 					<ul>
 						<li>
 							<div>
-								<a target="mainFrame" href="admin/admin_list">用户管理</a>
+								<a id="m12" target="mainFrame" href="#" onclick="return jump('m12','sys',<%=ad.getRsys()%>,'admin/admin_list')">用户管理</a>
 							</div>
 						</li>
 					</ul>

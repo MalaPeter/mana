@@ -49,6 +49,7 @@ public class Htchuanmei implements java.io.Serializable {
 	private String kfbeizhu;
 	private String kfuser;
 	private String shenpiuser;
+	private String pinming;
 
 	// Constructors
 
@@ -64,7 +65,7 @@ public class Htchuanmei implements java.io.Serializable {
 			String fkfangshi, String beizhu, String islock, String ispay,
 			String istingbo, String username, String isedit, String zuofei,
 			String iszengsong, String zsshiduan, String kfbeizhu,
-			String kfuser, String shenpiuser) {
+			String kfuser, String shenpiuser, String pinming) {
 		this.bianhao = bianhao;
 		this.kehuname = kehuname;
 		this.hangye = hangye;
@@ -94,6 +95,7 @@ public class Htchuanmei implements java.io.Serializable {
 		this.kfbeizhu = kfbeizhu;
 		this.kfuser = kfuser;
 		this.shenpiuser = shenpiuser;
+		this.pinming = pinming;
 	}
 
 	// Property accessors
@@ -372,6 +374,15 @@ public class Htchuanmei implements java.io.Serializable {
 
 	public void setShenpiuser(String shenpiuser) {
 		this.shenpiuser = shenpiuser;
+	}
+
+	@Column(name = "pinming")
+	public String getPinming() {
+		return this.pinming;
+	}
+
+	public void setPinming(String pinming) {
+		this.pinming = pinming;
 	}
 
 }

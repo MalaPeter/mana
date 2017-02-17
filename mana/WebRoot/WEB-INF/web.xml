@@ -4,6 +4,9 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	version="3.0">
 	<display-name>mana</display-name>
+	<session-config>
+	    <session-timeout>0</session-timeout>
+	</session-config>
 	<!-- 配置请求过滤器，编码格式设为UTF-8，避免中文乱码 -->
 	<filter>
 		<filter-name>springUtf8Encoding</filter-name>

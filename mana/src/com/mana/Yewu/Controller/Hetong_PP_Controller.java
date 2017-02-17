@@ -56,7 +56,7 @@ public class Hetong_PP_Controller {
     public void ht_chuanmei_yingxing_getindexdata(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
 		Admins ad = (Admins) request.getSession().getAttribute("admin");
-		List<Qianzhiyewu> list = qianzhiyewuDAO.getKeHuname(ad.getNickname());
+		List<Qianzhiyewu> list = qianzhiyewuDAO.getKeHuname(ad.getNickname());//查询 未锁定客户名称
 		List<KehunameJsonData> listdata = new ArrayList<KehunameJsonData>();
 		KehunameJsonData kehunamejd;
 		for(int i=0;i<list.size();i++) {
@@ -103,6 +103,7 @@ public class Hetong_PP_Controller {
 	public void ht_chuanmei_yingxing_save(HttpServletRequest request, HttpServletResponse response) throws IOException, ParseException {
 		System.out.println("save in");
 		Admins ad = (Admins) request.getSession().getAttribute("admin");
+		String nowusername = request.getParameter("nowusername");
 		String bianhao = request.getParameter("bianhao");
 		String kehuname = request.getParameter("kehuname");
 	    String hangye = request.getParameter("hangye");
@@ -121,6 +122,7 @@ public class Hetong_PP_Controller {
 	    String fkyddate = request.getParameter("fkyddate");
 	    String fkfangshi = request.getParameter("fkfangshi");
 	    String beizhu = request.getParameter("beizhu");
+	    String pinming = request.getParameter("pinming");
 		
 	    Htchuanmei ht = new Htchuanmei();
 	    ht.setBianhao(bianhao);
@@ -144,11 +146,12 @@ public class Hetong_PP_Controller {
 	    ht.setIslock("true");
 	    ht.setIspay("false");
 	    ht.setIstingbo("true");
-	    ht.setUsername(ad.getNickname());
+	    ht.setUsername(nowusername);
 	    ht.setIsedit("true");
 	    ht.setZuofei("false");
 	    ht.setIszengsong(iszengsong);
 	    ht.setZsshiduan(zsshiduan);
+	    ht.setPinming(pinming);
 	    
 	    htchuanmeiDAO.save(ht);
 	    
@@ -167,6 +170,7 @@ public class Hetong_PP_Controller {
     }
 	/**
 	 * 品牌合同 获得自己的合同列表 （限20条）
+	 * 新增：根据权限判断 获得自己或获得全部
 	 * @param request
 	 * @param response
 	 * @throws IOException

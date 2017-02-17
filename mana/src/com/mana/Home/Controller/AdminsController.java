@@ -101,6 +101,7 @@ public class AdminsController {
 		newad.setRtongji(Integer.valueOf(rtongji));
 		newad.setRshenpi(Integer.valueOf(rshenpi));
 		newad.setIslock(islock);
+		newad.setRsys(0);
 		
 		adminsDAO.save(newad);
 		

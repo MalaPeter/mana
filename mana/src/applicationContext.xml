@@ -8,7 +8,7 @@
 
 	<bean id="dataSource"
 		class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="url" value="jdbc:mysql://192.168.35.209:3306/mana"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/mana"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="root"></property>
 	</bean>
@@ -28,7 +28,9 @@
 			<list>
 				<value>com.mana.pojo.Admins</value>
 				<value>com.mana.pojo.Qianzhiyewu</value>
-				<value>com.mana.pojo.Htchuanmei</value></list>
+				<value>com.mana.pojo.Htchuanmei</value>
+				<value>com.mana.pojo.Htdaili</value>
+				<value>com.mana.pojo.Htdaililog</value></list>
 		</property></bean>
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
@@ -48,5 +50,30 @@
 	<bean id="htchuanmeiDAO" class="com.mana.pojo.HtchuanmeiDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="htdailiDAO" class="com.mana.pojo.HtdailiDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="htdaililogDAO" class="com.mana.pojo.HtdaililogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="HtdailiDAO" class="com.mana.pojo.HtdailiDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="HtpinpaiDAO" class="com.mana.pojo.HtpinpaiDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="HtpinpailogDAO" class="com.mana.pojo.HtpinpailogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
 		</property>
 	</bean></beans>
