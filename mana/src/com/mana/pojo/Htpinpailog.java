@@ -2,6 +2,8 @@ package com.mana.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -33,17 +35,10 @@ public class Htpinpailog implements java.io.Serializable {
 	public Htpinpailog() {
 	}
 
-	/** minimal constructor */
-	public Htpinpailog(Integer id) {
-		this.id = id;
-	}
-
 	/** full constructor */
-	public Htpinpailog(Integer id, String bianhao, String shiduan,
-			String guige, Integer kanlijia, String zhekou, Float jingjia,
-			Integer tianshu, Float zongjingjia, String zriqi, String yuefen,
-			String nianfen) {
-		this.id = id;
+	public Htpinpailog(String bianhao, String shiduan, String guige,
+			Integer kanlijia, String zhekou, Float jingjia, Integer tianshu,
+			Float zongjingjia, String zriqi, String yuefen, String nianfen) {
 		this.bianhao = bianhao;
 		this.shiduan = shiduan;
 		this.guige = guige;
@@ -59,6 +54,7 @@ public class Htpinpailog implements java.io.Serializable {
 
 	// Property accessors
 	@Id
+	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
 	public Integer getId() {
 		return this.id;
@@ -113,7 +109,7 @@ public class Htpinpailog implements java.io.Serializable {
 		this.zhekou = zhekou;
 	}
 
-	@Column(name = "jingjia", precision = 11, scale = 0)
+	@Column(name = "jingjia", precision = 11)
 	public Float getJingjia() {
 		return this.jingjia;
 	}
@@ -131,7 +127,7 @@ public class Htpinpailog implements java.io.Serializable {
 		this.tianshu = tianshu;
 	}
 
-	@Column(name = "zongjingjia", precision = 11, scale = 0)
+	@Column(name = "zongjingjia", precision = 11)
 	public Float getZongjingjia() {
 		return this.zongjingjia;
 	}

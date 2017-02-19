@@ -59,11 +59,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	var guigeflag = "";//当前选中规格
 	var bianhao = "";
 	var hetongsize = 0;//当日合同数量
+	var kehuname = "";//客户名称
 	
   	//动态生成当月 日期 并设定是否是六日
   	$(document).ready(function() {
   		$('#dlg_add').dialog('close');
   		$('#dlg').dialog('close');
+  		
+  		//获得已经登记的 客户名称（仅限当前用户,用户信息 session获得）//这个数据的获取，是从 之前废弃的一个类中获得
+		$.ajax( {   
+		    type : "POST",
+		    url : "<%=request.getContextPath()%>/yewu/ht_chuanmei_yingxing_getindexdata", 
+		    data : {
+		      'kehuname' : $("#kehuname").val(),
+		     },  
+		    dataType: "json",   
+		    success : function(data) {
+		    	data.push({ "text": "---请选择发布客户---", "value": "" });
+				$("#kehuname").combobox("loadData", data);
+				//$('#kehuname').combobox('reload');
+		    },   
+		    error :function(){
+		        $("#msgbox").html("网络连接出错！请联系网络管理员或服务器管理员！");
+		    }
+		});
+		//设置 选中的客户名称如果不选 应该是null
+		$('#kehuname').combobox({
+			onSelect: function (record) {
+				kehuname = record.value;
+			}
+		});
   		
   		$('#yue').combobox({
 			onSelect: function (record) {
@@ -157,7 +182,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		function gethetongsize() {
 			$.ajax( {   
 			    type : "POST",
-			    url : "<%=request.getContextPath()%>/yewu/ht_daili_getsize", 
+			    url : "<%=request.getContextPath()%>/yewu_pinpai/pinpai_getsize", 
 			    dataType: "text",   
 			    success : function(data) {
 					hetongsize = parseInt(data) + 1;//从1号开始，如果没有则返回的是0
@@ -282,11 +307,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		if(!subform()) {
 			alert("数据填写不正确！");
 		} else {
-			//向服务器提交数据
+			alert("保存操作，请不要重复提交，2-5秒后关闭此对话框，数据行变绿即可。");
 			$.ajax( {   
 			    type : "POST",
 			    url : "<%=request.getContextPath()%>/yewu_pinpai/saveshiduan",
 			    data : {
+			      'nianfen' : $("#nianfen"+trflag).val(),
+			      'yuefen' : $("#yuefen"+trflag).val(),
 			      'shiduan' : $("#shiduan"+trflag).val(),
 			      'guige' : $("#guige"+trflag).val(),
 			      'kanlijia' : $("#kanlijia"+trflag).val(),
@@ -295,11 +322,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			      'tianshu' : $("#tianshu"+trflag).val(),
 			      'zongjingjia' : $("#zongjingjia"+trflag).val(),
 			      'zriqi' : $("#zriqi"+trflag).val(),
-			      'sdate' : $('#sdate').datebox('getValue'),
-			      'edate' : $('#edate').datebox('getValue'),
+			      'sdate' : $("#sdate").datebox('getValue'),
+			      'edate' : $("#edate").datebox('getValue'),
 			      'bianhao' : bianhao,
-			      'kehuname' : $("#kehuname").val(),
-			      'daili' : $("#daili").val(),
+			      'kehuname' : kehuname,
+			      'daili' : 0,
 			      'hangye' : hangye,
 			      'meiti' : meiti,
 			      'nowusername' : $("#nowusername").val(),
@@ -308,6 +335,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    dataType: "text",
 			    success : function(data) {
 					$("#tr"+trflag).css('background-color','green');//保存后 修改背景色
+					$("#price").val(data)
 			    },   
 			    error :function(){
 			        $("#tr"+trflag).css('background-color','red');//保存后 修改背景色
@@ -328,7 +356,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		$("#jingjia"+trflag).val(y);
 	}
 	function sriqi(sriqi,trflag) {//传入复选框对象， 行标
-		alert(sriqi.value);
+		//alert(sriqi.value);
 		var w = $("#zriqi"+trflag).val();//日期临时存储 文本框
 		var x = $("#jingjia"+trflag).val();//获得净价
 		var y = parseInt($("#tianshu"+trflag).val());//获得天数 
@@ -352,9 +380,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 	function subform() {
 		var flag = true;
-		if($("#kehuname").val() == "") {
-			flag = false;
-		}
 		if($("#shiduan"+trflag).val() == "") {
 			flag = false;
 		}
@@ -388,7 +413,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		if(meiti == "") {
 			flag = false;
 		}
-		if($('#cdate').datebox('getValue') == "") {
+		if($('#sdate').datebox('getValue') == "") {
 			flag = false;
 		}
 		return flag;
@@ -405,7 +430,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<tr>
 				<td colspan="2">客户名称Brand Client：</td>
 				<td colspan="5">
-					<input id="kehuname" style="width: 200px">
+					<select class="easyui-combobox" id="kehuname" name="kehuname" style="width: 200px"></select>
 					<select class="easyui-combobox" id="hangye" name="hangye" style="width: 100px">
 							<option value="">-行业-</option>
 							<option value="QCWF">汽车外阜</option>
@@ -434,8 +459,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#dlg').dialog('open')">行业查询</a>
 				</td>
 				<td colspan="3">
-					合同起始：<input id="cdate" name="sdate" class="easyui-datebox"></input>
-					合同终止：<input id="cdate" name="edate" class="easyui-datebox"></input>
+					合同起始：<input id="sdate" name="sdate" class="easyui-datebox"></input>
+					合同终止：<input id="edate" name="edate" class="easyui-datebox"></input>
 					经办人：<input id="nowusername" style="width: 80px">
 				</td>
 			</tr>
@@ -453,7 +478,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<option value="FM97.6/吉林乡村广播">FM97.6/吉林乡村广播</option>
 						<option value="FM95.3/吉林经济广播">FM95.3/吉林经济广播</option>
 					</select>
+					合同总金额：<input id="price" style='width: 180px' readonly value='0'></input>
 					<a href="javascript:void(0)" class="easyui-linkbutton" onclick="inserttr()" iconCls="icon-add">添加一条数据</a>
+					<font color="red">切记，如果要更换月份，请一定先选择月份，再点击此按钮</font>
 				</td>
 			</tr>
 			<tr align="center">

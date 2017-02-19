@@ -3,6 +3,8 @@ package com.mana.pojo;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -22,7 +24,7 @@ public class Htpinpai implements java.io.Serializable {
 	private Date cdate;
 	private String daili;
 	private String kehuname;
-	private Integer price;
+	private Float price;
 	private String hangye;
 	private String meiti;
 	private String isshenpi;
@@ -44,18 +46,12 @@ public class Htpinpai implements java.io.Serializable {
 	public Htpinpai() {
 	}
 
-	/** minimal constructor */
-	public Htpinpai(Integer id) {
-		this.id = id;
-	}
-
 	/** full constructor */
-	public Htpinpai(Integer id, String bianhao, Date cdate, String daili,
-			String kehuname, Integer price, String hangye, String meiti,
-			String isshenpi, String isshenhe, String iszuofei, String ci,
-			String username, String kfuser, String shenpiuser, Date sdate,
-			Date edate, String shenpiremark, String shenheremark, Float jianmian) {
-		this.id = id;
+	public Htpinpai(String bianhao, Date cdate, String daili, String kehuname,
+			Float price, String hangye, String meiti, String isshenpi,
+			String isshenhe, String iszuofei, String ci, String username,
+			String kfuser, String shenpiuser, Date sdate, Date edate,
+			String shenpiremark, String shenheremark, Float jianmian) {
 		this.bianhao = bianhao;
 		this.cdate = cdate;
 		this.daili = daili;
@@ -79,6 +75,7 @@ public class Htpinpai implements java.io.Serializable {
 
 	// Property accessors
 	@Id
+	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
 	public Integer getId() {
 		return this.id;
@@ -125,12 +122,12 @@ public class Htpinpai implements java.io.Serializable {
 		this.kehuname = kehuname;
 	}
 
-	@Column(name = "price")
-	public Integer getPrice() {
+	@Column(name = "price", precision = 11)
+	public Float getPrice() {
 		return this.price;
 	}
 
-	public void setPrice(Integer price) {
+	public void setPrice(Float price) {
 		this.price = price;
 	}
 

@@ -30,7 +30,10 @@
 				<value>com.mana.pojo.Qianzhiyewu</value>
 				<value>com.mana.pojo.Htchuanmei</value>
 				<value>com.mana.pojo.Htdaili</value>
-				<value>com.mana.pojo.Htdaililog</value></list>
+				<value>com.mana.pojo.Htdaililog</value>
+				<value>com.mana.pojo.Htpinpai</value>
+				<value>com.mana.pojo.Htpinpailog</value>
+				</list>
 		</property></bean>
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
@@ -67,13 +70,14 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
-	<bean id="HtpinpaiDAO" class="com.mana.pojo.HtpinpaiDAO">
+	<bean id="htpinpaiDAO" class="com.mana.pojo.HtpinpaiDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
-	<bean id="HtpinpailogDAO" class="com.mana.pojo.HtpinpailogDAO">
+	<bean id="htpinpailogDAO" class="com.mana.pojo.HtpinpailogDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
-	</bean></beans>
+	</bean>
+	</beans>
