@@ -2,11 +2,14 @@ package com.mana.pojo;
 
 import java.util.Date;
 import java.util.List;
+
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
 import static org.hibernate.criterion.Example.create;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -237,5 +240,15 @@ public class HtpinpaiDAO {
 
 	public static HtpinpaiDAO getFromApplicationContext(ApplicationContext ctx) {
 		return (HtpinpaiDAO) ctx.getBean("HtpinpaiDAO");
+	}
+	/**
+	 * 自定义功能
+	 * 模糊查询
+	 * @param 客户名称 kehuname
+	 */
+	public List<Htpinpai> vague_findByBianhao(String kehuname) {
+		String queryString = "from Htpinpai as model where model.kehuname like '%" + kehuname +"%'";
+		Query queryObject = getCurrentSession().createQuery(queryString);
+		return queryObject.list();
 	}
 }

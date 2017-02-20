@@ -277,9 +277,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		}
 		trstr += "</tr></table></td>";
 		trstr += "<td>";
-		trstr += "<button onclick='savetr("+trflag+");'>保存</button>";
-		//trstr += " | ";
-		//trstr += "<button onclick='deletetr("+trflag+");'>删除</button>";
+		trstr += "<button id='btnsavetr"+trflag+"' onclick='savetr("+trflag+");'>保存</button>";
+		trstr += " | ";
+		trstr += "<button id='btndeltr"+trflag+"' disabled='disabled' onclick='deletetr("+trflag+");'>修改</button>";
 		trstr += "</td>";
 		trstr += "<input id='zriqi"+trflag+"' style='width: 40px' type='hidden'></input>";//临时保存 要提交的 播出日期，方便修改和存储
   		trstr += "</tr>";//设置行结尾
@@ -336,6 +336,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    success : function(data) {
 					$("#tr"+trflag).css('background-color','green');//保存后 修改背景色
 					$("#price").val(data)
+					//提交成功后，修改按钮状态，保存禁用、删除启用
+					$("#btnsavetr"+trflag).attr({"disabled":"disabled"});
+					$("#btndeltr"+trflag).removeAttr("disabled");
 			    },   
 			    error :function(){
 			        $("#tr"+trflag).css('background-color','red');//保存后 修改背景色
@@ -344,7 +347,34 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		}
 	}
 	function deletetr(trflag) {
-		alert("数据删除会出现的问题：需要获得全行数据对比，这也有可能删除相同的其他数据，联系管理员删除是最好的解决办法");
+			$.ajax( {   
+			    type : "POST",
+			    url : "<%=request.getContextPath()%>/yewu_pinpai/delshiduan",
+			    data : {
+			      'nianfen' : $("#nianfen"+trflag).val(),
+			      'yuefen' : $("#yuefen"+trflag).val(),
+			      'shiduan' : $("#shiduan"+trflag).val(),
+			      'guige' : $("#guige"+trflag).val(),
+			      'kanlijia' : $("#kanlijia"+trflag).val(),
+			      'zhekou' : $("#zhekou"+trflag).val(),
+			      'jingjia' : $("#jingjia"+trflag).val(),
+			      'tianshu' : $("#tianshu"+trflag).val(),
+			      'zongjingjia' : $("#zongjingjia"+trflag).val(),
+			      'zriqi' : $("#zriqi"+trflag).val(),
+			      'bianhao' : bianhao,
+			     },
+			    dataType: "text",
+			    success : function(data) {
+					$("#tr"+trflag).css('background-color','blue');//保存后 修改背景色
+					$("#price").val(data)
+					//提交成功后，修改按钮状态，保存禁用、删除启用
+					$("#btndeltr"+trflag).attr({"disabled":"disabled"});
+					$("#btnsavetr"+trflag).removeAttr("disabled");//删除操作，保存按钮
+			    },   
+			    error :function(){
+			        $("#tr"+trflag).css('background-color','red');//保存后 修改背景色
+			    }
+			});
 	}
 	function guigechange(guige,trflag) {
 		$("#kanlijia"+trflag).val(getprice(meiti,$("#"+shiduanflag+"").val(),guige.value));

@@ -403,6 +403,7 @@ public class QianzhiyewuController {
 		String shenpi = request.getParameter("shenpi");//暂时没用到
 		
 		Qianzhiyewu qzyw = qianzhiyewuDAO.findById(Integer.valueOf(id));
+		qzyw.setIslock(1);
 		qzyw.setPiyu(piyu);
 		qianzhiyewuDAO.save(qzyw);
 		
