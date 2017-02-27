@@ -31,6 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script src="<%=basePath%>datepicker/datepicker-n-months.js"></script>
 	<link rel="stylesheet" href="<%=basePath%>datepicker/datepicker.css" />
 	
+	
 	<style type="text/css">
 	.my-table {
 	    border: 1px solid #ccc;
@@ -47,7 +48,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 	</style>
 	<script type="text/javascript">
-	
 	//公共变量  用于其他函数 调用
 	var year = 0;//当前年份
 	var month = 0;//当前选择月份
@@ -81,6 +81,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    },   
 		    error :function(){
 		        $("#msgbox").html("网络连接出错！请联系网络管理员或服务器管理员！");
+		    }
+		});
+		//获得 以前输入过的 业务员名称
+		$.ajax({
+		    type : "POST",
+		    url : "<%=request.getContextPath()%>/publicf/getYewuyuan_pinpai",
+		    dataType: "json",
+		    success : function(data) {
+				$("#nowusername").combobox("loadData", data);
+		    },   
+		    error :function(){
+		        alert("网络连接出错！请联系网络管理员或服务器管理员！");
 		    }
 		});
 		//设置 选中的客户名称如果不选 应该是null
@@ -249,6 +261,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		trstr += "<td><select class='easyui-combobox' id='zhekou"+trflag+"' name='zhekou"+trflag+"' onchange='zhekouchange(this,"+trflag+")' style='width: 80px'>" + 
 					"<option value=''>-选择折扣-</option>" + 
 					"<option value='0.4'>4 折</option>" + 
+					"<option value='0.35'>3.5 折</option>" + 
 					"<option value='0.3'>3 折</option>" + 
 					"<option value='0.275'>2.75 折</option>" + 
 					"<option value='0.25'>2.5 折</option>" + 
@@ -304,8 +317,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		//shiduanflag = "";//清除当前选中时段
 	}
 	function savetr(trflag) {
-		if(!subform()) {
-			alert("数据填写不正确！");
+		var tt = subform();
+		if(!tt == "") {
+			alert(tt);
 		} else {
 			alert("保存操作，请不要重复提交，2-5秒后关闭此对话框，数据行变绿即可。");
 			$.ajax( {   
@@ -329,7 +343,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			      'daili' : 0,
 			      'hangye' : hangye,
 			      'meiti' : meiti,
-			      'nowusername' : $("#nowusername").val(),
+			      'nowusername' : $('#nowusername').combobox('getValue'),
 			      'ci' : $("#ci").val(),
 			     },
 			    dataType: "text",
@@ -409,44 +423,53 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		$("#zongjingjia"+trflag).val(z);//设置总净价
 	}
 	function subform() {
-		var flag = true;
+		var flag = "";
 		if($("#shiduan"+trflag).val() == "") {
-			flag = false;
+			flag = "请选择时段！";
 		}
 		if($("#guige"+trflag).val() == "") {
-			flag = false;
+			flag = "请选择规格";
 		}
 		if($("#kanlijia"+trflag).val() == "") {
-			flag = false;
+			flag = "刊例价错误";
 		}
 		if($("#zhekou"+trflag).val() == "") {
-			flag = false;
+			flag = "请选择折扣";
 		}
 		if($("#jingjia"+trflag).val() == "") {
-			flag = false;
+			flag = "净价错误";
 		}
 		if($("#zongjingjia"+trflag).val() == "") {
-			flag = false;
+			flag = "总净价错误";
 		}
 		if($("#zriqi"+trflag).val() == "") {
-			flag = false;
+			flag = "请选择日期";
 		}
 		if(bianhao == "") {
-			flag = false;
+			flag = "合同编号未生成";
 		}
-		if($("#nowusername").val() == "") {
-			flag = false;
+		if($('#nowusername').combobox('getValue') == "") {
+			flag = "请填写业务员";
 		}
 		if(hangye == "") {
-			flag = false;
+			flag = "请选择行业";
 		}
 		if(meiti == "") {
-			flag = false;
+			flag = "请选择播出媒体";
 		}
 		if($('#sdate').datebox('getValue') == "") {
-			flag = false;
+			flag = "请输入起始日期";
+		}
+		if($("#ci").val() == "请填写广告主题。") {
+			flag = "请填写广告主题。";
 		}
 		return flag;
+	}
+	//清空对话框
+	function cleartext() {
+		if($("#ci").val() == "请填写广告主题。") {
+			$("#ci").val("");
+		}
 	}
 	</script>
   </head>
@@ -491,7 +514,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td colspan="3">
 					合同起始：<input id="sdate" name="sdate" class="easyui-datebox"></input>
 					合同终止：<input id="edate" name="edate" class="easyui-datebox"></input>
-					经办人：<input id="nowusername" style="width: 80px">
+					经办人：<select class="easyui-combobox" id="nowusername" style="width: 80px"></select>
 				</td>
 			</tr>
 			<tr>
@@ -548,7 +571,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</td>
 			</tr>
 		</table>
-		<textarea id="ci" rows="10" cols="90"></textarea>
+		<textarea id="ci" rows="4" cols="90"  onfocus="cleartext()">请填写广告主题。</textarea>
 	</div>
 	<div id="dlg_add" class="easyui-dialog" title="选择时段" style="width:700px;height:400px;padding:10px;font-size: 10px"
 		data-options="buttons: [{text:'取消',iconCls:'icon-ok',handler:function(){$('#dlg_add').dialog('close');}}]">

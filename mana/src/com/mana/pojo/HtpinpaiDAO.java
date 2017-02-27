@@ -251,4 +251,15 @@ public class HtpinpaiDAO {
 		Query queryObject = getCurrentSession().createQuery(queryString);
 		return queryObject.list();
 	}
+	/**
+	 * 自定义功能
+	 * 模糊查询
+	 * @param 业务员名称
+	 */
+	public List<Htpinpai> vague_findByyewuyuan() {
+		String queryString = "select distinct username from Htpinpai as model";// where model.username like '%" + username +"%'
+		Query queryObject = getCurrentSession().createQuery(queryString);
+		return queryObject.list();
+	}
+	
 }
