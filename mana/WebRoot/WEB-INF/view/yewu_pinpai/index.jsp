@@ -46,6 +46,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	.riqi {
 		width: 20px;
 	}
+	#nav{  
+	    position:fixed;   
+	    top:0;   
+	    width:99%;   
+	    height: 90px;   
+	    background: #3CA9C4;
+	    display:none;
+	}  
 	</style>
 	<script type="text/javascript">
 	//公共变量  用于其他函数 调用
@@ -124,9 +132,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				$("#tr_zhoumo").remove();
 				var ritrString = "<tr align='center' id='tr_ri' width='100%'>";//设置日行开头
 				var zhoumotrString  = "<tr id='tr_zhoumo' width='100%'>";//设置是否周末行开头
+				$("#top_tr_ri").remove();
+				$("#top_tr_zhoumo").remove();
+				var top_ritrString = "<tr align='center' id='top_tr_ri' width='100%'>";//设置日行开头
+				var top_zhoumotrString  = "<tr id='top_tr_zhoumo' width='100%'>";//设置是否周末行开头
+				
 				var jianju = 100/daycount;
 				for(var j=0;j<daycount;j++) {
 					ritrString += "<td class='riqi'>"+(j+1)+"</td>";
+					top_ritrString += "<td class='riqi'>"+(j+1)+"</td>";
 					//组合年月日，判断是否周末
 					//组合日期开始，需要在 单月前+0
 					var nowmonth = record.value;
@@ -141,19 +155,93 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					var s = year + "-" + nowmonth + "-" + nowri;
 					if(new Date(s).getDay() == 0) {
 						zhoumotrString += "<td>s7</td>";
+						top_zhoumotrString += "<td>s7</td>";
 					}else if(new Date(s).getDay() == 6) {
 						zhoumotrString += "<td>s6</td>";
+						top_zhoumotrString += "<td>s6</td>";
 					} else {
 						zhoumotrString += "<td> </td>";
+						top_zhoumotrString += "<td> </td>";
 					}
 					
 				}
 				ritrString += "</tr>";//设置行结尾
+				top_ritrString += "</tr>";
 				zhoumotrString += "</tr>";//设置行结尾
+				top_zhoumotrString += "</tr>";
 				$("#ri").append(zhoumotrString).show();
 				$("#ri").append(ritrString).show();
 				//添加 同步，日期 主要判断本月最大日期
+				//克隆 到 指示层
+				$("#top_ri").append(top_zhoumotrString).show();
+				$("#top_ri").append(top_ritrString).show();
+			}
+		});
+		$('#yue_top').combobox({
+			onSelect: function (record) {
+				//alert(record.value);
+				//添加td,根据 当前月的最大天数
+				//获得 当前月最大天数
+				//获得 当前年份
+				var dtest = new Date();//var str = dtest.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+				//构造一个日期对象：
+				year = $("#year").val();
+				if(year == "") {
+					year = dtest.getFullYear();//赋值公共函数
+					//如果年份为空，则自动填写当年
+				}
+				var  day = new Date(year,record.value,0); 
+				//获取天数：
+				var daycount = day.getDate();
+				dayc = daycount;//赋值公共函数
+				//根据天数 生成TD个数 //添加 是否是 六日
+				$("#tr_ri").remove();
+				$("#tr_zhoumo").remove();
+				var ritrString = "<tr align='center' id='tr_ri' width='100%'>";//设置日行开头
+				var zhoumotrString  = "<tr id='tr_zhoumo' width='100%'>";//设置是否周末行开头
+				$("#top_tr_ri").remove();
+				$("#top_tr_zhoumo").remove();
+				var top_ritrString = "<tr align='center' id='top_tr_ri' width='100%'>";//设置日行开头
+				var top_zhoumotrString  = "<tr id='top_tr_zhoumo' width='100%'>";//设置是否周末行开头
 				
+				var jianju = 100/daycount;
+				for(var j=0;j<daycount;j++) {
+					ritrString += "<td class='riqi'>"+(j+1)+"</td>";
+					top_ritrString += "<td class='riqi'>"+(j+1)+"</td>";
+					//组合年月日，判断是否周末
+					//组合日期开始，需要在 单月前+0
+					var nowmonth = record.value;
+					if(nowmonth < 10) {
+						nowmonth = "0" + nowmonth;
+					}
+					month = nowmonth;//赋值公共变量
+					var nowri = j + 1;
+					if(nowri < 10) {
+						nowri = "0" + nowri;
+					}
+					var s = year + "-" + nowmonth + "-" + nowri;
+					if(new Date(s).getDay() == 0) {
+						zhoumotrString += "<td>s7</td>";
+						top_zhoumotrString += "<td>s7</td>";
+					}else if(new Date(s).getDay() == 6) {
+						zhoumotrString += "<td>s6</td>";
+						top_zhoumotrString += "<td>s6</td>";
+					} else {
+						zhoumotrString += "<td> </td>";
+						top_zhoumotrString += "<td> </td>";
+					}
+					
+				}
+				ritrString += "</tr>";//设置行结尾
+				top_ritrString += "</tr>";
+				zhoumotrString += "</tr>";//设置行结尾
+				top_zhoumotrString += "</tr>";
+				$("#ri").append(zhoumotrString).show();
+				$("#ri").append(ritrString).show();
+				//添加 同步，日期 主要判断本月最大日期
+				//克隆 到 指示层
+				$("#top_ri").append(top_zhoumotrString).show();
+				$("#top_ri").append(top_ritrString).show();
 			}
 		});
 		//媒体 时段联动
@@ -248,8 +336,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		//先添加整行
   		var trstr = "<tr id='tr"+trflag+"' align='center'>";
   		trstr += "<td><input id='shiduan"+trflag+"' onclick='add_open("+trflag+");' style='width: 40px' readonly></input></td>";
-  		trstr += "<td><select class='easyui-combobox' id='guige"+trflag+"' name='guige"+trflag+"' style='width: 80px' onchange='guigechange(this,"+trflag+")'>" + 
-					"<option value=''>-选择规格-</option>" + 
+  		trstr += "<td><select class='easyui-combobox' id='guige"+trflag+"' name='guige"+trflag+"' style='width: 60px' onchange='guigechange(this,"+trflag+")'>" + 
+					"<option value=''>规格</option>" + 
 					"<option value='5'>5 秒</option>" + 
 					"<option value='7'>7 秒</option>" + 
 					"<option value='10'>10秒</option>" + 
@@ -258,8 +346,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					"<option value='30'>30秒</option>" + 
 				"</select></td>";
   		trstr += "<td><input id='kanlijia"+trflag+"' style='width: 80px' readonly></input></td>";
-  		trstr += "<td><select class='easyui-combobox' id='zhekou"+trflag+"' name='zhekou"+trflag+"' onchange='zhekouchange(this,"+trflag+")' style='width: 80px'>" + 
-					"<option value=''>-选择折扣-</option>" + 
+  		trstr += "<td><select class='easyui-combobox' id='zhekou"+trflag+"' name='zhekou"+trflag+"' onchange='zhekouchange(this,"+trflag+")' style='width: 60px'>" + 
+					"<option value=''>折扣</option>" + 
 					"<option value='0.4'>4 折</option>" + 
 					"<option value='0.35'>3.5 折</option>" + 
 					"<option value='0.3'>3 折</option>" + 
@@ -267,12 +355,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					"<option value='0.25'>2.5 折</option>" + 
 					"<option value='0.225'>2.25 折</option>" + 
 					"<option value='0.2'>2 折</option>" + 
+					"<option value='0.17'>1.7 折</option>" + 
 					"<option value='0.15'>1.5 折</option>" + 
 					"<option value='0.13'>1.3 折</option>" + 
 				"</select></td>";
-  		trstr += "<td><input id='jingjia"+trflag+"' style='width: 80px' readonly value='0'></input></td>";
+  		trstr += "<td><input id='jingjia"+trflag+"' style='width: 70px' readonly value='0'></input></td>";
   		trstr += "<td><input id='tianshu"+trflag+"' style='width: 40px' readonly value='0'></input></td>";
-  		trstr += "<td><input id='zongjingjia"+trflag+"' style='width: 80px' readonly value='0'></input></td>";
+  		trstr += "<td><input id='zongjingjia"+trflag+"' style='width: 70px' readonly value='0'></input></td>";
   		trstr += "<td><input id='yuefen"+trflag+"' style='width: 40px' readonly value='"+month+"'></input></td>";
   		trstr += "<input id='nianfen"+trflag+"' style='width: 40px' readonly type='hidden' value='"+year+"'></input>";//隐藏传输
   		trstr += "<td align='left'><table border='1'><tr>";
@@ -471,11 +560,57 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			$("#ci").val("");
 		}
 	}
+	function scrolltest() {
+		var t = $("#scrollflag").offset().top;
+		if( t < 0 ) { 
+			$("#nav").show();
+		} else { 
+			$("#nav").hide();
+		} 
+	}
 	</script>
   </head>
   
   <body>
-   	<div id="p" class="easyui-panel" title="合同录入-广电传媒合同录入单" style="width:800px;height:800px;padding:1px;text-align: center;" fit="true">
+   	<div id="p" class="easyui-panel" title="合同录入-广电传媒合同录入单" style="width:800px;height:800px;padding:1px;text-align: center;" fit="true" onscroll="scrolltest()">
+   		<div id="nav">
+   			<table class="my-table">
+	   		<tr align="center">
+				<td rowspan="2" width="5%">时段</td>
+				<td rowspan="2" width="5%">长度</td>
+				<td rowspan="2" width="6%">刊例价</td>
+				<td rowspan="2" width="5%">折扣</td>
+				<td rowspan="2" width="6%">净价</td>
+				<td rowspan="2" width="4%">天数</td>
+				<td rowspan="2" width="6%">净价总计</td>
+				<td rowspan="2" width="4%">月份</td>
+				<td width="50%">
+					<a href="javascript:void(0)" class="easyui-linkbutton" onclick="inserttr()" iconCls="icon-add">添加一条数据</a>
+					<select class="easyui-combobox" id="yue_top" name="yue_top" style="width: 100px">
+						<option value="0">选择月份</option>
+						<option value="1">1 月</option>
+						<option value="2">2 月</option>
+						<option value="3">3 月</option>
+						<option value="4">4 月</option>
+						<option value="5">5 月</option>
+						<option value="6">6 月</option>
+						<option value="7">7 月</option>
+						<option value="8">8 月</option>
+						<option value="9">9 月</option>
+						<option value="10">10月</option>
+						<option value="11">11月</option>
+						<option value="12">12月</option>
+					</select>
+				</td>
+				<td rowspan="2" width="9%">操作区</td>
+			</tr>
+			<tr height="60px">
+				<td>
+					<table id="top_ri"></table>
+				</td>
+			</tr>
+   			</table>
+   		</div><!-- 浮动的 月份 -->
 		<h1>广告发布合同 - 品牌(PP)</h1>
 		<!--品牌合同中，客户是前置中填写的，但是有个问题是：代输入怎么办   <h2><input id="daili" style="width: 400" type="hidden"></h2>-->
 		<p align="right">合同编号：<font id="bianhao"></font></p>
@@ -536,7 +671,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<font color="red">切记，如果要更换月份，请一定先选择月份，再点击此按钮</font>
 				</td>
 			</tr>
-			<tr align="center">
+			<tr align="center" id="scrollflag"><!-- 此ID用于 识别用户是否拉动 滚动条 -->
 				<td rowspan="2" width="5%">时段</td>
 				<td rowspan="2" width="5%">长度</td>
 				<td rowspan="2" width="6%">刊例价</td>

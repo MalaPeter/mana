@@ -24,6 +24,7 @@ import com.mana.pojo.Qianzhiyewu;
 import com.mana.pojo.QianzhiyewuDAO;
 
 /**
+ * 最原始的 合同处理类，目前已经放弃使用
  * 合同管理  广电传媒
  * @author 安静波
  */

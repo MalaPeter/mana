@@ -80,6 +80,7 @@ function getprice(meiti2,shiduan,guige) {
 			case "05:00":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
 			case "05:30":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
 			case "06:00":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "06:15":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
 			case "06:27":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
 		}
 	}
@@ -146,34 +147,35 @@ function getprice(meiti2,shiduan,guige) {
 			case "21:27":if(guige==5)result=70;if(guige==10)result=140;if(guige==15)result=210;if(guige==20)result=280;if(guige==30)result=420;break;
 			case "21:42":if(guige==5)result=70;if(guige==10)result=140;if(guige==15)result=210;if(guige==20)result=280;if(guige==30)result=420;break;
 			case "21:56":if(guige==5)result=70;if(guige==10)result=140;if(guige==15)result=210;if(guige==20)result=280;if(guige==30)result=420;break;
-			case "22:30":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "23:00":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "23:30":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "00:00":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "00:30":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "01:00":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "01:30":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "02:00":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "02:30":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "03:00":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "03:30":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "04:00":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "04:30":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "05:00":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "05:30":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "06:00":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
-			case "06:27":if(guige==5)result=65;if(guige==10)result=110;if(guige==15)result=130;if(guige==20)result=220;if(guige==30)result=300;break;
+			case "22:30":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "23:00":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "23:30":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "00:00":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "00:30":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "01:00":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "01:30":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "02:00":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "02:30":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "03:00":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "03:30":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "04:00":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "04:30":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "05:00":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "05:30":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "06:00":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "06:15":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
+			case "06:27":if(guige==5)result=90;if(guige==10)result=140;if(guige==15)result=200;if(guige==20)result=340;if(guige==30)result=410;break;
 		}
 	}
 	if(meiti2 == "FM91.6/吉林新闻综合广播") {
 		switch (shiduan) {
-                	case "07:00":if(guige==5)result=516;if(guige==10)result=924;if(guige==15)result=1440;if(guige==20)result=1920;if(guige==30)result=2760;break;
-			case "07:37":if(guige==5)result=516;if(guige==10)result=924;if(guige==15)result=1440;if(guige==20)result=1920;if(guige==30)result=2760;break;
-                        case "20:00":if(guige==5)result=516;if(guige==10)result=924;if(guige==15)result=1440;if(guige==20)result=1920;if(guige==30)result=2760;break;
-                        case "20:28":if(guige==5)result=516;if(guige==10)result=924;if(guige==15)result=1440;if(guige==20)result=1920;if(guige==30)result=2760;break;
-                        case "20:58":if(guige==5)result=516;if(guige==10)result=924;if(guige==15)result=1440;if(guige==20)result=1920;if(guige==30)result=2760;break;
-                        case "21:28":if(guige==5)result=516;if(guige==10)result=924;if(guige==15)result=1440;if(guige==20)result=1920;if(guige==30)result=2760;break;
-                        case "21:58":if(guige==5)result=516;if(guige==10)result=924;if(guige==15)result=1440;if(guige==20)result=1920;if(guige==30)result=2760;break;
+                	case "07:00":if(guige==5)result=430;if(guige==10)result=770;if(guige==15)result=1200;if(guige==20)result=1600;if(guige==30)result=2300;break;
+			case "07:37":if(guige==5)result=430;if(guige==10)result=770;if(guige==15)result=1200;if(guige==20)result=1600;if(guige==30)result=2300;break;
+                        case "20:00":if(guige==5)result=430;if(guige==10)result=770;if(guige==15)result=1200;if(guige==20)result=1600;if(guige==30)result=2300;break;
+                        case "20:28":if(guige==5)result=430;if(guige==10)result=770;if(guige==15)result=1200;if(guige==20)result=1600;if(guige==30)result=2300;break;
+                        case "20:58":if(guige==5)result=430;if(guige==10)result=770;if(guige==15)result=1200;if(guige==20)result=1600;if(guige==30)result=2300;break;
+                        case "21:28":if(guige==5)result=430;if(guige==10)result=770;if(guige==15)result=1200;if(guige==20)result=1600;if(guige==30)result=2300;break;
+                        case "21:58":if(guige==5)result=430;if(guige==10)result=770;if(guige==15)result=1200;if(guige==20)result=1600;if(guige==30)result=2300;break;
                         case "06:00":if(guige==5)result=360;if(guige==10)result=660;if(guige==15)result=1000;if(guige==20)result=1500;if(guige==30)result=2000;break;
                         case "06:14":if(guige==5)result=360;if(guige==10)result=660;if(guige==15)result=1000;if(guige==20)result=1500;if(guige==30)result=2000;break;
                         case "06:27":if(guige==5)result=360;if(guige==10)result=660;if(guige==15)result=1000;if(guige==20)result=1500;if(guige==30)result=2000;break;
@@ -182,9 +184,11 @@ function getprice(meiti2,shiduan,guige) {
                         case "09:28":if(guige==5)result=330;if(guige==10)result=630;if(guige==15)result=910;if(guige==20)result=1180;if(guige==30)result=1800;break;
                         case "09:58":if(guige==5)result=330;if(guige==10)result=630;if(guige==15)result=910;if(guige==20)result=1180;if(guige==30)result=1800;break;
                         case "12:28":if(guige==5)result=330;if(guige==10)result=630;if(guige==15)result=910;if(guige==20)result=1180;if(guige==30)result=1800;break;
+                        case "13:28":if(guige==5)result=330;if(guige==10)result=630;if(guige==15)result=910;if(guige==20)result=1180;if(guige==30)result=1800;break;
                         case "16:58":if(guige==5)result=330;if(guige==10)result=630;if(guige==15)result=910;if(guige==20)result=1180;if(guige==30)result=1800;break;
                         case "17:28":if(guige==5)result=330;if(guige==10)result=630;if(guige==15)result=910;if(guige==20)result=1180;if(guige==30)result=1800;break;
                         case "17:58":if(guige==5)result=330;if(guige==10)result=630;if(guige==15)result=910;if(guige==20)result=1180;if(guige==30)result=1800;break;
+                        case "04:28":if(guige==5)result=250;if(guige==10)result=510;if(guige==15)result=710;if(guige==20)result=1000;if(guige==30)result=1500;break;
                         case "04:28":if(guige==5)result=250;if(guige==10)result=510;if(guige==15)result=710;if(guige==20)result=1000;if(guige==30)result=1500;break;
                         case "04:58":if(guige==5)result=250;if(guige==10)result=510;if(guige==15)result=710;if(guige==20)result=1000;if(guige==30)result=1500;break;
                         case "16:30":if(guige==5)result=250;if(guige==10)result=510;if(guige==15)result=710;if(guige==20)result=1000;if(guige==30)result=1500;break;
@@ -196,21 +200,20 @@ function getprice(meiti2,shiduan,guige) {
 	}
 	if(meiti2 == "FM103.3/吉林旅游广播") {
 		switch (shiduan) {
-			case "07:16":if(guige==7)result=132;if(guige==15)result=385;if(guige==20)result=506;if(guige==30)result=770;
-	                case "07:36":if(guige==7)result=132;if(guige==15)result=385;if(guige==20)result=506;if(guige==30)result=770; 
-                        case "07:56":if(guige==7)result=132;if(guige==15)result=385;if(guige==20)result=506;if(guige==30)result=770;	
-                        case "16:56":if(guige==7)result=132;if(guige==15)result=385;if(guige==20)result=506;if(guige==30)result=770;	
-                        case "17:16":if(guige==7)result=132;if(guige==15)result=385;if(guige==20)result=506;if(guige==30)result=770;
+			case "07:16":if(guige==7)result=132;if(guige==15)result=385;if(guige==20)result=506;if(guige==30)result=700;
+	                case "07:36":if(guige==7)result=132;if(guige==15)result=385;if(guige==20)result=506;if(guige==30)result=700; 
+                        case "07:56":if(guige==7)result=132;if(guige==15)result=385;if(guige==20)result=506;if(guige==30)result=700;	
+                        case "16:56":if(guige==7)result=132;if(guige==15)result=385;if(guige==20)result=506;if(guige==30)result=700;	
+                        case "17:16":if(guige==7)result=132;if(guige==15)result=385;if(guige==20)result=506;if(guige==30)result=700;
                         case "08:16":if(guige==7)result=110;if(guige==15)result=330;if(guige==20)result=440;if(guige==30)result=660;	
                         case "08:36":if(guige==7)result=110;if(guige==15)result=330;if(guige==20)result=440;if(guige==30)result=660;	
                         case "08:56":if(guige==7)result=110;if(guige==15)result=330;if(guige==20)result=440;if(guige==30)result=660;
                         case "16:16":if(guige==7)result=110;if(guige==15)result=330;if(guige==20)result=440;if(guige==30)result=660;		
                         case "16:36":if(guige==7)result=110;if(guige==15)result=330;if(guige==20)result=440;if(guige==30)result=660;		
-                        case "17:36":if(guige==7)result=110;if(guige==15)result=330;if(guige==20)result=440;if(guige==30)result=660;
-                        case "17:56":if(guige==7)result=110;if(guige==15)result=330;if(guige==20)result=440;if(guige==30)result=660;	
+                        case "17:36":if(guige==7)result=110;if(guige==15)result=330;if(guige==20)result=440;if(guige==30)result=660;	
                         case "06:56":if(guige==7)result=88;if(guige==15)result=253;if(guige==20)result=330;if(guige==30)result=506;	
                         case "09:16":if(guige==7)result=88;if(guige==15)result=253;if(guige==20)result=330;if(guige==30)result=506;
-                        case "09:36":if(guige==7)result=88;if(guige==15)result=253;if(guige==20)result=330;if(guige==30)result=506;
+                        case "06:36":if(guige==7)result=88;if(guige==15)result=253;if(guige==20)result=330;if(guige==30)result=506;
                         case "09:56":if(guige==7)result=88;if(guige==15)result=253;if(guige==20)result=330;if(guige==30)result=506;
                         case "10:16":if(guige==7)result=88;if(guige==15)result=253;if(guige==20)result=330;if(guige==30)result=506;
                         case "10:36":if(guige==7)result=88;if(guige==15)result=253;if(guige==20)result=330;if(guige==30)result=506;
@@ -220,7 +223,8 @@ function getprice(meiti2,shiduan,guige) {
                         case "11:56":if(guige==7)result=88;if(guige==15)result=253;if(guige==20)result=330;if(guige==30)result=506;
                         case "18:16":if(guige==7)result=88;if(guige==15)result=253;if(guige==20)result=330;if(guige==30)result=506;
                         case "18:36":if(guige==7)result=88;if(guige==15)result=253;if(guige==20)result=330;if(guige==30)result=506;	
-                        case "12:26":if(guige==7)result=66;if(guige==15)result=187;if(guige==20)result=264;if(guige==30)result=385;
+                        case "12:16":if(guige==7)result=66;if(guige==15)result=187;if(guige==20)result=264;if(guige==30)result=385;
+                        case "12:36":if(guige==7)result=66;if(guige==15)result=187;if(guige==20)result=264;if(guige==30)result=385;
                         case "12:56":if(guige==7)result=66;if(guige==15)result=187;if(guige==20)result=264;if(guige==30)result=385;
                         case "13:26":if(guige==7)result=66;if(guige==15)result=187;if(guige==20)result=264;if(guige==30)result=385;
                         case "13:56":if(guige==7)result=66;if(guige==15)result=187;if(guige==20)result=264;if(guige==30)result=385;
@@ -232,7 +236,7 @@ function getprice(meiti2,shiduan,guige) {
                         case "15:56":if(guige==7)result=66;if(guige==15)result=187;if(guige==20)result=264;if(guige==30)result=385;	
                         case "05:56":if(guige==7)result=44;if(guige==15)result=132;if(guige==20)result=176;if(guige==30)result=264;
                         case "06:26":if(guige==7)result=44;if(guige==15)result=132;if(guige==20)result=176;if(guige==30)result=264;
-                        case "19:26":if(guige==7)result=44;if(guige==15)result=132;if(guige==20)result=176;if(guige==30)result=264;
+                        case "19:16":if(guige==7)result=44;if(guige==15)result=132;if(guige==20)result=176;if(guige==30)result=264;
                         case "19:36":if(guige==7)result=44;if(guige==15)result=132;if(guige==20)result=176;if(guige==30)result=264;
                         case "19:56":if(guige==7)result=44;if(guige==15)result=132;if(guige==20)result=176;if(guige==30)result=264;
                         case "20:26":if(guige==7)result=44;if(guige==15)result=132;if(guige==20)result=176;if(guige==30)result=264;
@@ -288,24 +292,22 @@ function getprice(meiti2,shiduan,guige) {
 		switch (shiduan) {
 			case "07:25":if(guige==10)result=230;if(guige==20)result=440;if(guige==30)result=650;break;
 			case "08:25":if(guige==10)result=230;if(guige==20)result=440;if(guige==30)result=650;break;
-			case "09:30":if(guige==10)result=230;if(guige==20)result=440;if(guige==30)result=650;break;
 			case "10:28":if(guige==10)result=230;if(guige==20)result=440;if(guige==30)result=650;break;
-			case "11:00":if(guige==10)result=180;if(guige==20)result=340;if(guige==30)result=500;break;
 			case "11:28":if(guige==10)result=180;if(guige==20)result=340;if(guige==30)result=500;break;
 			case "12:28":if(guige==10)result=180;if(guige==20)result=340;if(guige==30)result=500;break;
 			case "12:55":if(guige==10)result=180;if(guige==20)result=340;if(guige==30)result=500;break;
-			case "16:25":if(guige==10)result=180;if(guige==20)result=340;if(guige==30)result=500;break;
-			case "16:57":if(guige==10)result=180;if(guige==20)result=340;if(guige==30)result=500;break;
-			case "14:27":if(guige==10)result=115;if(guige==20)result=230;if(guige==30)result=320;break;
-			case "21:30":if(guige==10)result=115;if(guige==20)result=230;if(guige==30)result=320;break;
-			case "20:28":if(guige==10)result=115;if(guige==20)result=230;if(guige==30)result=320;break;
+			case "16:28":if(guige==10)result=180;if(guige==20)result=340;if(guige==30)result=500;break;
+			case "13:58":if(guige==10)result=110;if(guige==20)result=230;if(guige==30)result=320;break;
+			case "14:58":if(guige==10)result=110;if(guige==20)result=230;if(guige==30)result=320;break;
+			case "19:28":if(guige==10)result=110;if(guige==20)result=230;if(guige==30)result=320;break;
+			case "20:28":if(guige==10)result=110;if(guige==20)result=230;if(guige==30)result=320;break;
 		}
 	}
 	if(meiti2 == "FM97.6/吉林乡村广播") {
 		switch (shiduan) {
 			case "09:55":if(guige==10)result=290;if(guige==20)result=580;if(guige==30)result=870;break;
-			case "11:55":if(guige==10)result=290;if(guige==20)result=580;if(guige==30)result=870;break;
-			case "10:25":if(guige==10)result=230;if(guige==20)result=440;if(guige==30)result=650;break;
+			case "09:55":if(guige==10)result=290;if(guige==20)result=580;if(guige==30)result=870;break;
+			case "10:20":if(guige==10)result=230;if(guige==20)result=440;if(guige==30)result=650;break;
 			case "12:25":if(guige==10)result=230;if(guige==20)result=440;if(guige==30)result=650;break;
 			case "12:55":if(guige==10)result=230;if(guige==20)result=440;if(guige==30)result=650;break;
 			case "17:55":if(guige==10)result=230;if(guige==20)result=440;if(guige==30)result=650;break;
@@ -313,6 +315,7 @@ function getprice(meiti2,shiduan,guige) {
 			case "07:25":if(guige==10)result=180;if(guige==20)result=340;if(guige==30)result=500;break;
 			case "07:55":if(guige==10)result=180;if(guige==20)result=340;if(guige==30)result=500;break;
 			case "08:25":if(guige==10)result=180;if(guige==20)result=340;if(guige==30)result=500;break;
+			case "16:55":if(guige==10)result=130;if(guige==20)result=250;if(guige==30)result=380;break;
 			case "18:25":if(guige==10)result=130;if(guige==20)result=250;if(guige==30)result=380;break;
 			case "18:55":if(guige==10)result=130;if(guige==20)result=250;if(guige==30)result=380;break;
 			case "14:55":if(guige==10)result=95;if(guige==20)result=180;if(guige==30)result=250;break;
@@ -327,23 +330,18 @@ function getprice(meiti2,shiduan,guige) {
 			case "07:25":if(guige==10)result=350;if(guige==15)result=510;if(guige==20)result=680;if(guige==30)result=1050;break;
 			case "07:55":if(guige==10)result=350;if(guige==15)result=510;if(guige==20)result=680;if(guige==30)result=1050;break;
 			case "08:25":if(guige==10)result=350;if(guige==15)result=510;if(guige==20)result=680;if(guige==30)result=1050;break;
-            case "07:00":if(guige==10)result=250;if(guige==15)result=380;if(guige==20)result=510;if(guige==30)result=750;break;
 			case "09:30":if(guige==10)result=250;if(guige==15)result=380;if(guige==20)result=510;if(guige==30)result=750;break;
-			case "10:20":if(guige==10)result=250;if(guige==15)result=380;if(guige==20)result=510;if(guige==30)result=750;break;
-			case "11:30":if(guige==10)result=250;if(guige==15)result=380;if(guige==20)result=510;if(guige==30)result=750;break;
-            case "11:55":if(guige==10)result=190;if(guige==15)result=300;if(guige==20)result=380;if(guige==30)result=580;break;
+			case "10:25":if(guige==10)result=250;if(guige==15)result=380;if(guige==20)result=510;if(guige==30)result=750;break;
+			case "11:55":if(guige==10)result=250;if(guige==15)result=380;if(guige==20)result=510;if(guige==30)result=750;break;
 			case "12:25":if(guige==10)result=190;if(guige==15)result=300;if(guige==20)result=380;if(guige==30)result=580;break;
-			case "12:50":if(guige==10)result=190;if(guige==15)result=300;if(guige==20)result=380;if(guige==30)result=580;break;
-            case "14:00":if(guige==10)result=190;if(guige==15)result=300;if(guige==20)result=380;if(guige==30)result=580;break;
+			case "12:55":if(guige==10)result=190;if(guige==15)result=300;if(guige==20)result=380;if(guige==30)result=580;break;
 			case "14:25":if(guige==10)result=190;if(guige==15)result=300;if(guige==20)result=380;if(guige==30)result=580;break;
-			case "15:30":if(guige==10)result=150;if(guige==15)result=220;if(guige==20)result=300;if(guige==30)result=450;break;
-            case "15:55":if(guige==10)result=150;if(guige==15)result=220;if(guige==20)result=300;if(guige==30)result=450;break;
+			case "15:55":if(guige==10)result=150;if(guige==15)result=220;if(guige==20)result=300;if(guige==30)result=450;break;
 			case "16:55":if(guige==10)result=150;if(guige==15)result=220;if(guige==20)result=300;if(guige==30)result=450;break;
 			case "17:25":if(guige==10)result=150;if(guige==15)result=220;if(guige==20)result=300;if(guige==30)result=450;break;
 			case "17:55":if(guige==10)result=150;if(guige==15)result=220;if(guige==20)result=300;if(guige==30)result=450;break;
 			case "18:25":if(guige==10)result=95;if(guige==15)result=160;if(guige==20)result=200;if(guige==30)result=300;break;
 			case "18:55":if(guige==10)result=95;if(guige==15)result=160;if(guige==20)result=200;if(guige==30)result=300;break;
-			case "21:00":if(guige==10)result=95;if(guige==15)result=160;if(guige==20)result=200;if(guige==30)result=300;break;
 		}
 	}
 	return result;

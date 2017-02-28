@@ -2,11 +2,14 @@ package com.mana.pojo;
 
 import java.util.Date;
 import java.util.List;
+
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
 import static org.hibernate.criterion.Example.create;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -222,5 +225,42 @@ public class HtdailiDAO {
 		String queryString = "delete from Htdaili as model where model.bianhao='" + bianhao +"'";
 		Query queryObject = getCurrentSession().createQuery(queryString);
 		queryObject.executeUpdate();
+	}
+	/**
+	 * 自定义功能
+	 * @param 业务员名称
+	 */
+	public List<Htdaili> vague_findByyewuyuan() {
+		String queryString = "select distinct username from Htdaili as model";// where model.username like '%" + username +"%'
+		Query queryObject = getCurrentSession().createQuery(queryString);
+		return queryObject.list();
+	}
+	/**
+	 * 自定义功能
+	 * @param 代理公司名称
+	 */
+	public List<Htdaili> vague_findDailinames() {
+		String queryString = "select distinct daili from Htdaili as model";// where model.username like '%" + username +"%'
+		Query queryObject = getCurrentSession().createQuery(queryString);
+		return queryObject.list();
+	}
+	/**
+	 * 自定义功能
+	 * @param 客户名称
+	 */
+	public List<Htdaili> vague_findKehunames() {
+		String queryString = "select distinct kehuname from Htdaili as model";// where model.username like '%" + username +"%'
+		Query queryObject = getCurrentSession().createQuery(queryString);
+		return queryObject.list();
+	}
+	/**
+	 * 自定义功能
+	 * 模糊查询
+	 * @param 客户名称 kehuname
+	 */
+	public List<Htdaili> vague_findBykehuname(String kehuname) {
+		String queryString = "from Htdaili as model where model.daili like '%" + kehuname +"%'";
+		Query queryObject = getCurrentSession().createQuery(queryString);
+		return queryObject.list();
 	}
 }

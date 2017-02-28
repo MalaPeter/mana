@@ -243,7 +243,7 @@ function createFrame(url) {
 						
 						<li>
 							<div>
-								<a id="m13" target="mainFrame" href="#" onclick="return jump('m13','yewu',<%=ad.getRluru()%>,'yewu_shiduan/index')">录入-代理(DL)-时段</a>
+								<a id="m13" target="mainFrame" href="#" onclick="return jump('m13','yewu',<%=ad.getRluru()%>,'yewu_daili/index')">录入-代理(DL)-时段</a>
 							</div>
 						</li>
 						<li>
@@ -253,7 +253,7 @@ function createFrame(url) {
 						</li>
 						<li>
 							<div>
-								<a id="m14" target="mainFrame" href="#" onclick="return jump('m14','yewu',<%=ad.getRluru()%>,'yewu_shiduan/list')">管理-代理(DL)-时段</a>
+								<a id="m14" target="mainFrame" href="#" onclick="return jump('m14','yewu',<%=ad.getRluru()%>,'yewu_daili/list')">管理-代理(DL)-时段</a>
 							</div>
 						</li>
 						<li>

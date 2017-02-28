@@ -65,11 +65,6 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
-	<bean id="HtdailiDAO" class="com.mana.pojo.HtdailiDAO">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
 	<bean id="htpinpaiDAO" class="com.mana.pojo.HtpinpaiDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />

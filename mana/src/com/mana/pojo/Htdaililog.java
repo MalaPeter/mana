@@ -26,6 +26,8 @@ public class Htdaililog implements java.io.Serializable {
 	private Integer tianshu;
 	private Float zongjingjia;
 	private String zriqi;
+	private String yuefen;
+	private String nianfen;
 
 	// Constructors
 
@@ -36,7 +38,7 @@ public class Htdaililog implements java.io.Serializable {
 	/** full constructor */
 	public Htdaililog(String bianhao, String shiduan, String guige,
 			Integer kanlijia, String zhekou, Float jingjia, Integer tianshu,
-			Float zongjingjia, String zriqi) {
+			Float zongjingjia, String zriqi, String yuefen, String nianfen) {
 		this.bianhao = bianhao;
 		this.shiduan = shiduan;
 		this.guige = guige;
@@ -46,6 +48,8 @@ public class Htdaililog implements java.io.Serializable {
 		this.tianshu = tianshu;
 		this.zongjingjia = zongjingjia;
 		this.zriqi = zriqi;
+		this.yuefen = yuefen;
+		this.nianfen = nianfen;
 	}
 
 	// Property accessors
@@ -139,6 +143,24 @@ public class Htdaililog implements java.io.Serializable {
 
 	public void setZriqi(String zriqi) {
 		this.zriqi = zriqi;
+	}
+
+	@Column(name = "yuefen")
+	public String getYuefen() {
+		return this.yuefen;
+	}
+
+	public void setYuefen(String yuefen) {
+		this.yuefen = yuefen;
+	}
+
+	@Column(name = "nianfen")
+	public String getNianfen() {
+		return this.nianfen;
+	}
+
+	public void setNianfen(String nianfen) {
+		this.nianfen = nianfen;
 	}
 
 }

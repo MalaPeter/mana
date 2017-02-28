@@ -72,7 +72,7 @@ public class Hetong_PP_shiduan_Controller {
 			htdl.setHangye(hangye);
 			htdl.setKehuname(kehuname);
 			htdl.setMeiti(meiti);
-			htdl.setPrice(0);//#总价暂未计算，考虑用其他方式
+			htdl.setPrice(Float.valueOf(0));//#总价暂未计算，考虑用其他方式
 			htdl.setIsshenhe("false");
 			htdl.setIsshenpi("false");
 			htdl.setCdate(df.parse(cdate));
