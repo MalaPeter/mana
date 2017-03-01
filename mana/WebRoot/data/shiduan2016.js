@@ -64,8 +64,8 @@
 	$("#tdshiduan").append("是否赠送：<input name='shiduanzengsong' type='radio' value='true' checked='true'/>是");
 	$("#tdshiduan").append("<input name='shiduanzengsong' type='radio' value='false'/>否<br>");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='22:30' onclick='dayandprice(this)'/>22:30");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='23:00' onclick='dayandprice(this)'/>23:00");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='23:30' onclick='dayandprice(this)'/>23:30");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='23:30' onclick='dayandprice(this)'/>23:00");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='00:00' onclick='dayandprice(this)'/>00:00");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='00:30' onclick='dayandprice(this)'/>00:30");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='01:00' onclick='dayandprice(this)'/>01:00");
@@ -79,6 +79,7 @@
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='05:00' onclick='dayandprice(this)'/>05:00");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='05:30' onclick='dayandprice(this)'/>05:30");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='06:00' onclick='dayandprice(this)'/>06:00");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='06:15' onclick='dayandprice(this)'/>06:15");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='06:27' onclick='dayandprice(this)'/>06:27");
 }
 
@@ -93,7 +94,7 @@ function shiduan1001() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='17:12' onclick='dayandprice(this)'/>17:12");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='17:42' onclick='dayandprice(this)'/>17:42");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='08:27' onclick='dayandprice(this)'/>08:27");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='08:42' onclick='dayandprice(this)'/>08:42</br>");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='08:24' onclick='dayandprice(this)'/>08:24</br>");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='09:42' onclick='dayandprice(this)'/>09:42");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='16:42' onclick='dayandprice(this)'/>16:42");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='17:56' onclick='dayandprice(this)'/>17:56");
@@ -104,8 +105,7 @@ function shiduan1001() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='09:56' onclick='dayandprice(this)'/>09:56");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='10:12' onclick='dayandprice(this)'/>10:12");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='16:27' onclick='dayandprice(this)'/>16:27</br>");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='07:12' onclick='dayandprice(this)'/>07:12");
-        $("#tdshiduan").append("<input name='shiduan' type='checkbox' value='10:27' onclick='dayandprice(this)'/>10:27");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='10:27' onclick='dayandprice(this)'/>10:27");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='10:42' onclick='dayandprice(this)'/>10:42");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='10:56' onclick='dayandprice(this)'/>10:56");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='11:12' onclick='dayandprice(this)'/>11:12");
@@ -113,8 +113,8 @@ function shiduan1001() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='16:12' onclick='dayandprice(this)'/>16:12");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='06:56' onclick='dayandprice(this)'/>06:56");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='09:12' onclick='dayandprice(this)'/>09:12");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='09:27' onclick='dayandprice(this)'/>09:27</br>");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='15:56' onclick='dayandprice(this)'/>15:56");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='09:27' onclick='dayandprice(this)'/>09:27");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='15:56' onclick='dayandprice(this)'/>15:56</br>");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:56' onclick='dayandprice(this)'/>18:56");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='11:56' onclick='dayandprice(this)'/>11:56");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='11:42' onclick='dayandprice(this)'/>11:42");
@@ -123,8 +123,8 @@ function shiduan1001() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:42' onclick='dayandprice(this)'/>12:42");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='06:27' onclick='dayandprice(this)'/>06:27");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:56' onclick='dayandprice(this)'/>12:56");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='13:12' onclick='dayandprice(this)'/>13:12</br>");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='13:27' onclick='dayandprice(this)'/>13:27");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='13:12' onclick='dayandprice(this)'/>13:12");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='13:27' onclick='dayandprice(this)'/>13:27</br>");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='13:42' onclick='dayandprice(this)'/>13:42");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='15:12' onclick='dayandprice(this)'/>15:12");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='15:27' onclick='dayandprice(this)'/>15:27");
@@ -133,8 +133,8 @@ function shiduan1001() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:27' onclick='dayandprice(this)'/>14:27");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:42' onclick='dayandprice(this)'/>14:42");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:56' onclick='dayandprice(this)'/>14:56");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='15:42' onclick='dayandprice(this)'/>15:42</br>");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='19:27' onclick='dayandprice(this)'/>19:27");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='15:42' onclick='dayandprice(this)'/>15:42");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='19:27' onclick='dayandprice(this)'/>19:27</br>");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='19:42' onclick='dayandprice(this)'/>19:42");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='19:56' onclick='dayandprice(this)'/>19:56");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='20:12' onclick='dayandprice(this)'/>20:12");
@@ -143,13 +143,13 @@ function shiduan1001() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='20:56' onclick='dayandprice(this)'/>20:56");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='21:12' onclick='dayandprice(this)'/>21:12");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='21:27' onclick='dayandprice(this)'/>21:27");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='21:42' onclick='dayandprice(this)'/>21:42<hr>");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='21:42' onclick='dayandprice(this)'/>21:42");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='21:56' onclick='dayandprice(this)'/>21:56<hr>");
 	$("#tdshiduan").append("是否赠送：<input name='shiduanzengsong' type='radio' value='true' checked='true'/>是");
 	$("#tdshiduan").append("<input name='shiduanzengsong' type='radio' value='false'/>否<br>");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='22:30' onclick='dayandprice(this)'/>22:30");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='23:00' onclick='dayandprice(this)'/>23:00");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='23:30' onclick='dayandprice(this)'/>23:30");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='23:30' onclick='dayandprice(this)'/>23:00");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='00:00' onclick='dayandprice(this)'/>00:00");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='00:30' onclick='dayandprice(this)'/>00:30");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='01:00' onclick='dayandprice(this)'/>01:00");
@@ -163,6 +163,7 @@ function shiduan1001() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='05:00' onclick='dayandprice(this)'/>05:00");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='05:30' onclick='dayandprice(this)'/>05:30");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='06:00' onclick='dayandprice(this)'/>06:00");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='06:15' onclick='dayandprice(this)'/>06:15");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='06:27' onclick='dayandprice(this)'/>06:27");
 }
 function shiduan916() {
@@ -182,11 +183,12 @@ function shiduan916() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='09:28' onclick='dayandprice(this)'/>09:28");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='09:58' onclick='dayandprice(this)'/>09:58");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:28' onclick='dayandprice(this)'/>12:28");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='13:28' onclick='dayandprice(this)'/>13:28");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='16:58' onclick='dayandprice(this)'/>16:58");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='17:28' onclick='dayandprice(this)'/>17:28");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='17:58' onclick='dayandprice(this)'/>17:58");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='04:28' onclick='dayandprice(this)'/>04:28");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='04:58' onclick='dayandprice(this)'/>04:58</br>");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='04:28' onclick='dayandprice(this)'/>04:28</br>");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='04:58' onclick='dayandprice(this)'/>04:58");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='16:30' onclick='dayandprice(this)'/>16:30");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:26' onclick='dayandprice(this)'/>18:26");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:58' onclick='dayandprice(this)'/>18:58");
@@ -219,12 +221,13 @@ function shiduan1033() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='11:56' onclick='dayandprice(this)'/>11:56");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:16' onclick='dayandprice(this)'/>18:16");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:36' onclick='dayandprice(this)'/>18:36");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:26' onclick='dayandprice(this)'/>12:26");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:16' onclick='dayandprice(this)'/>12:16");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:36' onclick='dayandprice(this)'/>12:36");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:56' onclick='dayandprice(this)'/>12:56");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='13:26' onclick='dayandprice(this)'/>13:26");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='13:56' onclick='dayandprice(this)'/>13:56");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:56' onclick='dayandprice(this)'/>18:56");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:26' onclick='dayandprice(this)'/>14:26</br>");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:56' onclick='dayandprice(this)'/>18:56</br>");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:26' onclick='dayandprice(this)'/>14:26");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:56' onclick='dayandprice(this)'/>14:56");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='15:16' onclick='dayandprice(this)'/>15:16");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='15:36' onclick='dayandprice(this)'/>15:36");
@@ -233,8 +236,8 @@ function shiduan1033() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='06:26' onclick='dayandprice(this)'/>06:26");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='19:16' onclick='dayandprice(this)'/>19:16");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='19:36' onclick='dayandprice(this)'/>19:36");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='19:56' onclick='dayandprice(this)'/>19:56");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='20:26' onclick='dayandprice(this)'/>20:26</br>");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='19:56' onclick='dayandprice(this)'/>19:56</br>");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='20:26' onclick='dayandprice(this)'/>20:26");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='20:56' onclick='dayandprice(this)'/>20:56");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='21:26' onclick='dayandprice(this)'/>21:26");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='21:56' onclick='dayandprice(this)'/>21:56");
@@ -285,23 +288,21 @@ function shiduan1019() {
 	$("#tdshiduan").empty();
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='07:25' onclick='dayandprice(this)'/>07:25");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='08:25' onclick='dayandprice(this)'/>08:25");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='09:30' onclick='dayandprice(this)'/>09:30");
-        $("#tdshiduan").append("<input name='shiduan' type='checkbox' value='10:28' onclick='dayandprice(this)'/>10:28");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='11:00' onclick='dayandprice(this)'/>11:00");
-        $("#tdshiduan").append("<input name='shiduan' type='checkbox' value='11:28' onclick='dayandprice(this)'/>11:28");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='10:28' onclick='dayandprice(this)'/>10:28");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='11:28' onclick='dayandprice(this)'/>11:28");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:28' onclick='dayandprice(this)'/>12:28");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:55' onclick='dayandprice(this)'/>12:55");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='16:25' onclick='dayandprice(this)'/>16:25");
-        $("#tdshiduan").append("<input name='shiduan' type='checkbox' value='16:57' onclick='dayandprice(this)'/>16:57</br>");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:27' onclick='dayandprice(this)'/>14:27");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='21:30' onclick='dayandprice(this)'/>21:30");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='16:28' onclick='dayandprice(this)'/>16:28");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='13:58' onclick='dayandprice(this)'/>13:58");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:58' onclick='dayandprice(this)'/>14:58");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='19:28' onclick='dayandprice(this)'/>19:28");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='20:28' onclick='dayandprice(this)'/>20:28");
 }
 function shiduan976() {
 	$("#tdshiduan").empty();
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='09:55' onclick='dayandprice(this)'/>09:55");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='11:55' onclick='dayandprice(this)'/>11:55");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='10:25' onclick='dayandprice(this)'/>10:25");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='10:20' onclick='dayandprice(this)'/>10:20");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:25' onclick='dayandprice(this)'/>12:25");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:55' onclick='dayandprice(this)'/>12:55");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='17:55' onclick='dayandprice(this)'/>17:55");
@@ -309,6 +310,7 @@ function shiduan976() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='07:25' onclick='dayandprice(this)'/>07:25");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='07:55' onclick='dayandprice(this)'/>07:55");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='08:25' onclick='dayandprice(this)'/>08:25</br>");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='16:55' onclick='dayandprice(this)'/>16:55");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:25' onclick='dayandprice(this)'/>18:25");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:55' onclick='dayandprice(this)'/>18:55");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:55' onclick='dayandprice(this)'/>14:55");
@@ -322,21 +324,16 @@ function shiduan953() {
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='07:25' onclick='dayandprice(this)'/>07:25");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='07:55' onclick='dayandprice(this)'/>07:55");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='08:25' onclick='dayandprice(this)'/>08:25");
-        $("#tdshiduan").append("<input name='shiduan' type='checkbox' value='07:00' onclick='dayandprice(this)'/>07:00");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='09:30' onclick='dayandprice(this)'/>09:30");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='10:20' onclick='dayandprice(this)'/>10:20");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='11:30' onclick='dayandprice(this)'/>11:30");
-        $("#tdshiduan").append("<input name='shiduan' type='checkbox' value='11:55' onclick='dayandprice(this)'/>11:55");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='10:25' onclick='dayandprice(this)'/>10:25");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='11:55' onclick='dayandprice(this)'/>11:55");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:25' onclick='dayandprice(this)'/>12:25");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:50' onclick='dayandprice(this)'/>12:50</br>");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:00' onclick='dayandprice(this)'/>14:00");
-        $("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:25' onclick='dayandprice(this)'/>14:25");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='15:30' onclick='dayandprice(this)'/>15:30");
-        $("#tdshiduan").append("<input name='shiduan' type='checkbox' value='15:55' onclick='dayandprice(this)'/>15:55");	
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='12:55' onclick='dayandprice(this)'/>12:55");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='14:25' onclick='dayandprice(this)'/>14:25");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='15:55' onclick='dayandprice(this)'/>15:55</br>");	
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='16:55' onclick='dayandprice(this)'/>16:55");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='17:25' onclick='dayandprice(this)'/>17:25");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='17:55' onclick='dayandprice(this)'/>17:55");
 	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:25' onclick='dayandprice(this)'/>18:25");
-        $("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:55' onclick='dayandprice(this)'/>18:55");
-	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='21:00' onclick='dayandprice(this)'/>21:00</br>");
+	$("#tdshiduan").append("<input name='shiduan' type='checkbox' value='18:55' onclick='dayandprice(this)'/>18:55");
 }

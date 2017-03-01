@@ -23,7 +23,7 @@
 <link rel="stylesheet" type="text/css"
 	href="<%=basePath%>jeui/themes/default/easyui.css">
 <link rel="stylesheet" type="text/css"
-	href="<%=basePath%>jeui/themes/icon.css">
+	href="<%=basePath%>jeui/themes/IconExtension.css">
 <script type="text/javascript" src="<%=basePath%>jeui/jquery.min.js"></script>
 <script type="text/javascript"
 	src="<%=basePath%>jeui/jquery.easyui.min.js"></script>
@@ -215,7 +215,7 @@ function createFrame(url) {
 					<ul>
 						<li>
 							<div>
-								<a id="m1" target="mainFrame" href="#" onclick="return jump('m1','shenpi',<%=ad.getRshenpi()%>,'shenpi/PP_index')">审批-传媒-品牌(PP)</a>
+								<a id="m1" data-options="iconCls:'icon-key_add',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m1','shenpi',<%=ad.getRshenpi()%>,'shenpi/PP_index')">审批-品牌(PP)</a>
 							</div>
 						</li>
 					</ul>
@@ -227,48 +227,58 @@ function createFrame(url) {
 					<ul>
 						<li>
 							<div>
-								<a id="m2" target="mainFrame" href="#" onclick="return jump('m2','yewu',<%=ad.getRluru()%>,'yewu/qianzhiyewuindex')">前置业务录入</a>
+								<a id="m2" data-options="iconCls:'icon-add',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m2','yewu',<%=ad.getRluru()%>,'yewu/qianzhiyewuindex')">前置业务录入</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a id="m3" target="mainFrame" href="#" onclick="return jump('m3','yewu',<%=ad.getRluru()%>,'yewu/qianzhiyewulist')">前置业务列表</a>
+								<a id="m3" data-options="iconCls:'icon-06',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m3','yewu',<%=ad.getRluru()%>,'yewu/qianzhiyewulist')">前置业务列表</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a id="m4" target="mainFrame" href="#" onclick="return jump('m4','liulan',<%=ad.getRliulan()%>,'yewu/qianzhiyewushenpi')">前置业务审批</a>
+								<a id="m4" data-options="iconCls:'icon-key_add',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m4','liulan',<%=ad.getRliulan()%>,'yewu/qianzhiyewushenpi')">前置业务审批</a>
 							</div>
 						</li>
 						
 						<li>
 							<div>
-								<a id="m13" target="mainFrame" href="#" onclick="return jump('m13','yewu',<%=ad.getRluru()%>,'yewu_daili/index')">录入-代理(DL)-时段</a>
+								<a id="m13" data-options="iconCls:'icon-add',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m13','yewu',<%=ad.getRluru()%>,'yewu_daili/index')">录入-代理(DL)</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a id="m15" target="mainFrame" href="#" onclick="return jump('m15','yewu',<%=ad.getRluru()%>,'yewu_pinpai/index')">录入-品牌(PP)-时段</a>
+								<a id="m15" data-options="iconCls:'icon-add',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m15','yewu',<%=ad.getRluru()%>,'yewu_pinpai/index')">录入-品牌(PP)</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a id="m14" target="mainFrame" href="#" onclick="return jump('m14','yewu',<%=ad.getRluru()%>,'yewu_daili/list')">管理-代理(DL)-时段</a>
+								<a id="m17" data-options="iconCls:'icon-add',toggle:true" class="easyui-linkbutton" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m17','yewu',<%=ad.getRluru()%>,'yewu_zanzhu_guanming/index')">录入-赞助冠名()</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a id="m16" target="mainFrame" href="#" onclick="return jump('m16','yewu',<%=ad.getRluru()%>,'yewu_pinpai/list')">管理-品牌(PP)-时段</a>
+								<a id="m14" data-options="iconCls:'icon-06',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m14','yewu',<%=ad.getRluru()%>,'yewu_daili/list')">管理-代理(DL)</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a id="m5" target="mainFrame" href="#" onclick="return jump('m5','yewu',<%=ad.getRluru()%>,'yewu/htchuanmeiindex')">录入-样本</a>
+								<a id="m16" data-options="iconCls:'icon-06',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m16','yewu',<%=ad.getRluru()%>,'yewu_pinpai/list')">管理-品牌(PP)</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a id="m6" target="mainFrame" href="#" onclick="return jump('m6','yewu',<%=ad.getRluru()%>,'yewu/htchuanmeilist')">管理-样本</a>
+								<a id="m18" data-options="iconCls:'icon-06',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m18','yewu',<%=ad.getRluru()%>,'yewu_zanzhu_guanming/list')">管理-赞助冠名()</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<a id="m5" data-options="iconCls:'icon-add',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m5','yewu',<%=ad.getRluru()%>,'yewu/htchuanmeiindex')">录入-样本</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<a id="m6" data-options="iconCls:'icon-06',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m6','yewu',<%=ad.getRluru()%>,'yewu/htchuanmeilist')">管理-样本</a>
 							</div>
 						</li>
 					</ul>
@@ -279,17 +289,17 @@ function createFrame(url) {
 					<ul>
 						<li>
 							<div>
-								<a id="m7" target="mainFrame" href="#" onclick="return jump('m7','kefu',<%=ad.getRshenhe()%>,'kefu/kfshenheindex')">审核-传媒-品牌(PP)</a>
+								<a id="m7" data-options="iconCls:'icon-key_add',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m7','kefu',<%=ad.getRshenhe()%>,'kefu/kfshenheindex')">审核-品牌(PP)</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a id="m8" target="mainFrame" href="#" onclick="return jump('m8','kefu',<%=ad.getRshenhe()%>,'kefu/Print_list')">打印-传媒-品牌(PP)</a>
+								<a id="m8" data-options="iconCls:'icon-2012081511202',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m8','kefu',<%=ad.getRshenhe()%>,'kefu/Print_list')">打印-品牌(PP)</a>
 							</div>
 						</li>
 						<li>
 							<div>
-								<a id="m9" target="mainFrame" href="#" onclick="return jump('m9','kefu',<%=ad.getRtingbo()%>,'working.jsp')">停播</a>
+								<a id="m9" data-options="iconCls:'icon-01',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m9','kefu',<%=ad.getRtingbo()%>,'working.jsp')">停播</a>
 							</div>
 						</li>
 					</ul>
@@ -300,7 +310,7 @@ function createFrame(url) {
 					<ul>
 						<li>
 							<div>
-								<a id="m10" target="mainFrame" href="#" onclick="return jump('m10','caiwu',<%=ad.getRhuakuan()%>,'working.jsp')">账务审核</a>
+								<a id="m10" data-options="iconCls:'icon-calculator',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m10','caiwu',<%=ad.getRhuakuan()%>,'working.jsp')">账务审核</a>
 							</div>
 						</li>
 					</ul>
@@ -311,7 +321,7 @@ function createFrame(url) {
 					<ul>
 						<li>
 							<div>
-								<a id="m11" target="mainFrame" href="#" onclick="return jump('m11','shuju',<%=ad.getRtongji()%>,'working.jsp')">数据统计</a>
+								<a id="m11" data-options="iconCls:'icon-chart_curve_add',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m11','shuju',<%=ad.getRtongji()%>,'working.jsp')">数据统计</a>
 							</div>
 						</li>
 					</ul>
@@ -322,7 +332,7 @@ function createFrame(url) {
 					<ul>
 						<li>
 							<div>
-								<a id="m12" target="mainFrame" href="#" onclick="return jump('m12','sys',<%=ad.getRsys()%>,'admin/admin_list')">用户管理</a>
+								<a id="m12" data-options="iconCls:'icon-03',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m12','sys',<%=ad.getRsys()%>,'admin/admin_list')">用户管理</a>
 							</div>
 						</li>
 					</ul>
