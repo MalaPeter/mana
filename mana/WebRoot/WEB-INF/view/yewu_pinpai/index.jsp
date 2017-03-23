@@ -437,7 +437,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			     },
 			    dataType: "text",
 			    success : function(data) {
-					$("#tr"+trflag).css('background-color','green');//保存后 修改背景色
+					$("#tr"+trflag).css('background-color','#719966');//保存后 修改背景色
 					$("#price").val(data)
 					//提交成功后，修改按钮状态，保存禁用、删除启用
 					$("#btnsavetr"+trflag).attr({"disabled":"disabled"});

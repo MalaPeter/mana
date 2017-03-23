@@ -33,6 +33,7 @@
 				<value>com.mana.pojo.Htdaililog</value>
 				<value>com.mana.pojo.Htpinpai</value>
 				<value>com.mana.pojo.Htpinpailog</value>
+				<value>com.mana.pojo.Htzanzhu</value>
 				</list>
 		</property></bean>
 	<bean id="transactionManager"
@@ -75,4 +76,8 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
-	</beans>
+	<bean id="htzanzhuDAO" class="com.mana.pojo.HtzanzhuDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean></beans>

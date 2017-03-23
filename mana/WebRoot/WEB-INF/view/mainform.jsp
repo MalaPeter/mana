@@ -253,7 +253,12 @@ function createFrame(url) {
 						</li>
 						<li>
 							<div>
-								<a id="m17" data-options="iconCls:'icon-add',toggle:true" class="easyui-linkbutton" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m17','yewu',<%=ad.getRluru()%>,'yewu_zanzhu_guanming/index')">录入-赞助冠名()</a>
+								<a id="m17" data-options="iconCls:'icon-add',toggle:true" class="easyui-linkbutton" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m17','yewu',<%=ad.getRluru()%>,'yewu_zanzhu/index')">录入-赞助(ZZ)</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<a id="m19" data-options="iconCls:'icon-add',toggle:true" class="easyui-linkbutton" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m19','yewu',<%=ad.getRluru()%>,'yewu_taobo/index')">录入-套播(TB)</a>
 							</div>
 						</li>
 						<li>
@@ -268,7 +273,12 @@ function createFrame(url) {
 						</li>
 						<li>
 							<div>
-								<a id="m18" data-options="iconCls:'icon-06',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m18','yewu',<%=ad.getRluru()%>,'yewu_zanzhu_guanming/list')">管理-赞助冠名()</a>
+								<a id="m18" data-options="iconCls:'icon-06',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m18','yewu',<%=ad.getRluru()%>,'yewu_zanzhu/list')">管理-赞助(ZZ)</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<a id="m20" data-options="iconCls:'icon-06',toggle:true" class="easyui-linkbutton" target="mainFrame" href="#" onclick="return jump('m20','yewu',<%=ad.getRluru()%>,'yewu_taobo/list')">管理-套播(TB)</a>
 							</div>
 						</li>
 						<li>
